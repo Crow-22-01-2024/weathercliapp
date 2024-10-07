@@ -87,10 +87,7 @@ class WeatherFormatter
 
   # This method determines the units of measurement for temperature and wind speed
   def unit
-    puts @argv.inspect
     unit = @argv.last
-
-    puts @argv.inspect
 
     unitT = if unit == 'standard'
               'Kelvin'
