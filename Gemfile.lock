@@ -12,10 +12,16 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     base64 (0.2.0)
     bigdecimal (3.1.8)
+    colorize (1.1.0)
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
+    crack (1.0.0)
+      bigdecimal
+      rexml
     dotenv (3.1.4)
     drb (2.2.1)
     faraday (2.12.0)
@@ -26,6 +32,7 @@ GEM
       multipart-post (~> 2)
     faraday-net_http (3.3.0)
       net-http
+    hashdiff (1.1.1)
     hashie (5.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -42,8 +49,10 @@ GEM
       faraday-multipart
       hashie
     prism (1.0.0)
+    public_suffix (6.0.1)
     rbs (3.5.3)
       logger
+    rexml (3.3.8)
     ruby-lsp (0.18.3)
       language_server-protocol (~> 3.17.0)
       prism (~> 1.0)
@@ -54,15 +63,21 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uri (0.13.1)
+    webmock (3.24.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
   x86_64-linux
 
 DEPENDENCIES
+  colorize
   dotenv
   open-weather-ruby-client
   ruby-lsp
+  webmock
 
 RUBY VERSION
    ruby 3.3.5p100

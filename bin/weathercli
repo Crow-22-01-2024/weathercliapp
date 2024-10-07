@@ -2,29 +2,20 @@
 
 # frozen_string_literal: true
 
-require 'net/http'
+# This file is an executable binary for weathercli
+# 1 - Load the API key for Open Weather API from your .env file
+# 2 - Takes the arguments and the city in an arguments array
+# 3 - Instantiates a singleton object of type WeatherFetcher, passing the key in the arguments of the instance method
+# 4 - Instantiates a singleton object of type CLI, passing the singleton object WeatherFetcher in the arguments of the instance method
+# 5 - Runs the app, passing the arguments to the run method of the CLI object
+
+require_relative '../lib/cli'
+require_relative '../lib/weather_fetcher'
 require 'dotenv'
-require 'dotenv/load'
-require 'json'
 
 Dotenv.load(File.expand_path('../.env', __dir__))
 
-def fetch_weather(city)
-  api_key = ENV['OPENWEATHER_API_KEY']
-  url = "https://api.openweathermap.org/data/2.5/weather?q=#{city}&units=metric&appid=#{api_key}"
-  uri = URI(url)
-  response = Net::HTTP.get(uri) # returns a Response object
-  JSON.parse(response) # parse Response object to Hash  and returns a hash with all data
-end
-
-city = ARGV.join(' ')
-
-weather = fetch_weather(city)
-
-city_name = weather['name']
-temp = weather['main']['temp']
-weather_description = weather['weather'][0]['description']
-
-puts "City: #{city_name}"
-puts "Temperature: #{temp}"
-puts "Weather: #{weather_description}"
+arguments = ARGV
+weather_fetcher = WeatherFetcher.instance(ENV['OPENWEATHER_API_KEY'])
+cli = CLI.instance(weather_fetcher)
+cli.run(arguments)
