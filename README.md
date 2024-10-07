@@ -22,8 +22,8 @@ WeatherCLI is a command-line application that fetches and displays weather infor
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/weathercli.git
-   cd weathercli
+   git clone https://github.com/Crow-22-01-2024/weathercliapp.git
+   cd weathercliapp
    ```
 
 2. Install the required gems:
