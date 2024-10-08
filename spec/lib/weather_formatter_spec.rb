@@ -23,10 +23,7 @@ RSpec.describe WeatherFormatter do
     }
   end
 
-  # let(:argv) { [] }
-
   before(:each) do
-    #  Reset the singleton instance before each test
     WeatherFormatter.reset_instance
   end
 
