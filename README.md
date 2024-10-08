@@ -17,6 +17,12 @@ WeatherCLI is a command-line application that fetches and displays weather infor
 - Rake gem
 - OpenWeather API key
 
+## Ruby Installation
+
+1. Documentation for install any version of ruby in different patforms `https://www.ruby-lang.org/en/documentation/installation/`
+
+2. Documentation for install any ruby version with rbenv in different platforms `https://github.com/rbenv/rbenv`
+
 ## Installation
 
 1. Clone the repository:
