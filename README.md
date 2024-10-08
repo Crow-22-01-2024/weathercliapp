@@ -7,6 +7,7 @@ WeatherCLI is a command-line application that fetches and displays weather infor
 ## Table of Content
 
 - Prerequisites
+- Ruby Installation
 - Installation
 - Usage
 
