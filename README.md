@@ -2,6 +2,8 @@
 
 !WeatherCLI
 
+!Build Status !Coverage
+
 WeatherCLI is a command-line application that fetches and displays weather information for a specified city using the OpenWeather API.
 
 ## Table of Content
