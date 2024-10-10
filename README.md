@@ -32,7 +32,7 @@ WeatherCLI is a command-line application that fetches and displays weather infor
    ```
 
 2. Install the required gems:
-   The required gems is in the Gemfile you can install via :
+   The required gems are in the Gemfile you can install via :
 
    ```sh
     bundle install
